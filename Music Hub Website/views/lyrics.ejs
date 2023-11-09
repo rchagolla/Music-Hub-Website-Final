@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://genius.com/songs/378195/embed.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> </title>
+  <%- include('partials/header.ejs') %>
+</head>
+<body>
+  <h1> Lyrics </h1>
+</body>
+  <%- include('partials/nav.ejs') %>
+<div id="bigBox" class = "grid-container">
+  <div id="lyricSearch">
+    <p>Search for Song Lyrics:</p>
+    <p>(Lyrics will open in the Genius website)</p>
+    <form action="/lyricSearch">
+    <input type="text" id="keyword" name="keyword" placeholder="Search Artist, Album, or Song">
+    <button type="submit" id="searchBtn" class="btn btn-primary">Search!</button>
+  </form>
+
+    <% if (songs != "") { %>
+      <% for (var i = 0; i < songs.length; i++) { %>
+        <div id="playlistSearchItem">
+          <!-- <button id="lyricButton" onclick=displayLyrics()>View Lyrics</button> -->
+          <button id="lyricButton" onclick="window.location.href='<%= `https://genius.com${songs[i].result.path}` %>'">View Lyrics</button>
+
+          <%= i+1 %> : <img class="artistPic" src="<%= songs[i].result.header_image_thumbnail_url %>"> <%= songs[i].result.title %> - <%= songs[i].result.artist_names %>
+          <br>  </div>
+      <% } %>
+    <% } %>
+</div>
+  <!-- <div id="lyricDisplay"> Lyrics:
+<div id='rg_embed_link_245054' class='rg_embed_link' data-song-id='245054'>Read <a href='https://genius.com/Vance-joy-riptide-lyrics'>“Riptide” by Vance Joy</a> on Genius</div> <script crossorigin src='//genius.com/songs/245054/embed.js'></script>
+  </div> -->
+</div>
+
+  
+  <%- include('partials/footer.ejs') %>
+    <script src="/js/lyricsScript.js"></script>
+    <!-- <script crossorigin src='//genius.com/songs/378195/embed.js'></script> -->
+    <!-- <script src="https://genius.com/song_embed.js"></script> -->
+
+</html>

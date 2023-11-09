@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> Music Hub - Register </title>
+  <%- include('partials/header.ejs') %>
+    
+</head>
+<body>
+  <h1> Register for Music Hub </h1>  
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Register</h5>
+      <form action="/register/new" method="POST">
+        Username: <input type="text" name="registerUsername" id="registerUsername">
+        <div id="usernameFeedback"></div>
+        <br>
+        Password: <input type="password" id="registerPassword" name="registerPassword">
+        <br>
+        Confirm Password: <input type="password" id="registerPasswordConfirm" name="registerPasswordConfirm">
+        <br>
+        <div id="registerFeedback"></div>
+        <button id="accountRegisterButton">Submit</button>    
+      </form>
+    Already have an account? 
+    <a href="login" class="card-link"> Log in.</a>
+  </div>
+</div>
+  <script src="/js/registerScript.js"></script>
+  <%- include('partials/footer.ejs') %>
+    </body>
+</html>

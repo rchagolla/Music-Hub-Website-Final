@@ -1,0 +1,34 @@
+<!-- Deezer AppID: 5362137244 -->
+<!-- Deezer Token: c55f8de18636d06638ba8cc72a5faa9e90c9bf7ac2dc9f218dcc83b108f2a09374374a2aa40a167dbdf890e3581f6b1caec83ca46047dc9c9ef1745c77b26827dc9f79805fe73c3eed3d25c06cadd3034857fb248c81bf41e87cf237c123c787 -->
+
+<!-- BandsInTown Key: d1a456429d32067ce6d660b6880c4451 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> </title>
+    <%- include('partials/header.ejs') %>
+  </head>
+  <body>
+    <h1> Upcoming Events </h1>
+
+    <%- include('partials/nav.ejs') %>
+
+    <div id="artistSearch">
+      <form id="artistSearchForm">
+        <p id="artistText">Search for Artist (Upcoming events will show below): </p> <input type="text" name="eventArtist" id="artistInput">
+        <button type="submit">Search</button>
+      </form>
+      <br>
+      <img id="artistImg">
+      <a id="artistLink" target="_blank"></a>
+      <div id="eventList"></div>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+      
+    <script src="/js/eventsScript.js"></script>
+  </body>
+</html>

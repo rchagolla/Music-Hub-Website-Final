@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> </title>
+  <%- include('partials/header.ejs') %>
+</head>
+<body>
+  <h1> Home </h1>
+</body>
+  <%- include('partials/nav.ejs') %>
+
+
+<!-- Introductory popup explaining the website. disappears permanently using webstorage once the "dismiss" button is clicked -->
+<div class="card" style="width: 22rem;" id="introPopup">
+  <div class="card-header">
+    Welcome to Music Hub!
+  </div>
+  <div class="card-body">
+      <div>
+            By making an account, you can make playlists of your favorite songs! You can also look up lyrics, and events for your favorite artists!
+      </div>
+    Dont have an account yet? 
+    <a href="register" class="card-link"> Register here.</a>
+  </div>
+  <button type="button" class="close" id="closeButton">Dismiss
+    </button>
+</div>
+<br>
+    
+  <div id="topArtistsCarousel" class="carousel slide" data-bs-ride="carousel">
+    <h1>MusicHub's Current Top Artists</h1>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+          <img src="<%= topArtists[0].photoUrl %>" class="d-block w-100" alt="<%= topArtists[0].artistName %>">
+          <h5>#1 <%= topArtists[0].artistName %></h5>
+          <div class="carArtistDescription">
+            Bio: <%= topArtists[0].description %>
+          </div>
+    </div>
+    <% for (var i = 1; i < topArtists.length; i++) { %>
+      <div class="carousel-item">
+        <img src="<%= topArtists[i].photoUrl %>" class="d-block w-100" alt="<%= topArtists[i].artistName %>">
+        <h5>#<%= i+1 %> <%= topArtists[i].artistName %></h5>
+        <div class="carArtistDescription">
+          Bio: <%= topArtists[i].description %>
+        </div>
+      </div>
+    <% } %>
+    <!-- <div class="carousel-item active">
+      <img src="https://www.billboard.com/wp-content/uploads/2023/04/Taylor-Swift-Arlington-eras-2023-billboard-1548.jpg?w=942&h=623&crop=1" class="d-block w-100" alt="Taylor Swift">
+      <h5>Taylor Swift</h5>
+    </div>
+    <div class="carousel-item">
+      <img src="https://yt3.googleusercontent.com/g_EI_lj1ZgVP_F99e5sZoXh8oUcmNxkJw8ED7gF5jJKhI5MlfreAzEthM_7UrZo2jQsf0BSLNA=s900-c-k-c0x00ffffff-no-rj" class="d-block w-100" alt="Carly Rae Jepsen">
+      <h5>Carly Rae Jepsen</h5>
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.rollingstone.com/wp-content/uploads/2022/07/beyonce-2022-cr-parkwood-entertainment.jpg?w=1581&h=1054&crop=1" class="d-block w-100" alt="Beyonce">
+      <h5>Beyonce</h5>
+    </div> -->
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#topArtistsCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#topArtistsCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    
+  <%- include('partials/footer.ejs') %>
+    <script src="/js/homeScript.js"></script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> </title>
+  <%- include('partials/header.ejs') %>
+</head>
+<body>
+  <h1> Playlist View </h1>
+  
+</body>
+  <%- include('partials/nav.ejs') %>
+  <% if (typeof(username) != "undefined") { %>
+    <% for(var i = 0; i < playlists.length; i++) {%>
+      <div class="card" style="width: 18rem;">
+      <img src="<%= playlistCovers[i] %>" class="card-img-top" onload="displayFirstSongs(<%= i %>)" alt="Beyonce">
+      <div class="card-body">
+        <h5 class="card-title" name="playlistName" value="<%= playlists[i].name %>"> <%= playlists[i].name %> </h5>
+        <p class="card-text" id="artistCredit"> By <%= username %> </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <% for (var j = 0; j < firstThreeSongs[i].length; j++)  { %>
+        <li class="list-group-item" id="playlistSong"> <%= firstThreeSongs[i][j] %> </li>
+        <% } %>
+      </ul>
+      <div class="card-body">
+        <!-- <a onclick="" class="card-link"> View <a>
+        <a href="#" class="card-link">Another link</a> -->
+      </div>
+      </div>
+    <% } %>
+  <% } %>
+  <%- include('partials/footer.ejs') %>
+    <script src="/js/playlistViewScript.js"></script>
+</html>

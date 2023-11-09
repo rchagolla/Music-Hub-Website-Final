@@ -1,0 +1,270 @@
+body{
+  background-color: #424242;
+  color: white;
+}
+
+h1{
+  text-align: center;
+  background-color: #17263e;
+  color: white;
+  border-radius: 5px;
+}
+
+h2{
+  text-align: center;
+  background-color: #17263e;
+  color: white;
+  border-radius: 5px;
+}
+
+h5{
+  text-align: center;
+  background-color: #17263e;
+  color: white;
+  border-radius: 5px;
+}
+
+footer{
+  font-size: 10px;
+  text-align: center;
+  color: white;
+}
+
+img{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 15px;
+}
+
+button{
+  margin: 5px;
+}
+
+#logo{
+  width: 50px;
+  border-radius: 4px;
+}
+
+#center{
+  text-align: center;
+  padding: 20px;
+}
+
+.loginbar{
+/*   display: flex; */
+  text-align: right;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: #212121;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.loginbar a{
+  padding: 10px;
+}
+
+.navbar{
+  /* text-align: left */
+  /* margin-right: 20px; */
+  background-color: #17263e;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  /* width: 60%; */
+}
+
+.card{
+  background-color: #212121;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+.carousel{
+  height:300px;
+}
+
+.carousel-item img{
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+}
+
+#topArtistsCarousel{
+  margin: 0 auto;
+  /* width: 70%; */
+  width: 600px;
+  height: 70%;
+}
+
+#loginFeedback{
+  /* visibility: hidden; */
+  background-color: red;
+}
+
+#registerFeedback{
+/*   visibility: hidden; */
+  background-color: red;
+}
+
+#usernameFeedback{
+/*   visibility: hidden; */
+  display: none;
+  background-color: red;
+}
+
+#artistSearch{
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #17263e;
+  width: 800px;
+  border-radius: 20px;
+}
+
+#artistText{
+  color: white;
+}
+
+#songSearch{
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #17263e;
+  width: 600px;
+}
+
+#songText{
+  color: white;
+}
+
+#songInput{
+  margin-bottom: 15px;
+}
+
+#lyricsBox{
+  margin: 0 auto;
+  background-color: white;
+  width: 300px;
+}
+
+#lyricsTitle{
+  color: black;
+}
+
+#homeText{
+  color: white;
+}
+
+#introPopup{
+  display: none;
+}
+
+.playlistAdd{
+  border-radius: 40px;
+  width: 150px;
+  height: 50px;
+}
+
+#playlistCreate{
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+  background-color: #17263e;
+}
+
+#playlistSearchItem{
+  text-align:left;
+}
+
+#searchPlaylist{
+  text-align: center;
+}
+
+#center{
+  text-align: center;
+  margin: 0 auto;
+}
+
+#artistCredit{
+  text-align: center;
+}
+
+#playlistSong{
+  text-align: center;
+}
+
+#keyword {
+  width: 40%;
+}
+
+#lyricSearch{
+  margin: 0 auto;
+  /* width: 600px; */
+  width: 50%;
+  text-align: center;
+  background-color: #17263e;
+  border-radius: 10px;
+}
+
+#eventList{
+  margin: 20 auto;
+  padding: 15px;
+  /* width: 50%; */
+  text-align: center;
+  background-color: #17263e;
+  border-radius: 20px;
+}
+
+#lyricDisplay{
+  margin: 0 auto;
+  /* width: 600px; */
+  width: 40%;
+  text-align: center;
+  background-color: #17263e;
+}
+
+#lyricButton{
+  border-radius: 40px;
+  width: 100px;
+  height: 30px;
+}
+
+.artistPic {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  padding: 3px;
+}
+
+#bigBox{
+  display: flex;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px; */
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid yellow;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+#addMessage {
+  background-color: green;
+}
+
+#artistImg {
+  width: 300px;
+}
+
+.carArtistDescription {
+  background-color: #17263e;
+  color: white;
+  border-radius: 5px;
+}

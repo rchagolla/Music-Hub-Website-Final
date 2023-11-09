@@ -1,0 +1,16 @@
+<h2>Music Hub</h2>
+<nav class = "loginbar" id="loginbar">
+  <% if (typeof(username) != "undefined") { %>
+    Welcome <%= username+"!" %> <a href='/logout' id='logoutlink'>Log out</a> <a href='/updateusername' id='changenamelink'>Update Username/Password</a>
+  <% } else { %>
+   <a href="login"> Log In </a> <a href="register"> Register </a>  
+  <% } %>
+</nav>
+<nav class = "navbar">
+    <a href="/"> Home </a> 
+    <a href="/playlistview"> Playlist View </a>
+    <a href="/playlistcreation"> Playlist Creation </a>
+    <a href="/events"> Events </a>
+    <a href="/lyrics"> Lyrics </a>
+  <!-- <script src="/js/loginLogout.js"></script> -->
+</nav>
